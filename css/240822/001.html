@@ -1,0 +1,64 @@
+<!-- float -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      img {
+        float: right;
+      }
+
+      span {
+        float: left;
+        background-color: aqua;
+        margin: 20px;
+      }
+
+      p {
+        clear: both;
+      }
+
+      .parent {
+        background-color: blue;
+        /* 모든 자식요소가 float 속성을 가질 때 부모요소는 자식요소의 높이를 인식 못함 */
+        
+        /* 1. 첫번째 방법(유연성이 떨어져요) */
+        /* height: 150px; */
+        
+        /* 2. 두번째 방법 */
+        /* overflow: hidden; */
+
+      }
+
+      /* 3. 세번째 방법. 제일 많이 사용됨 */
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <span>hello world</span>
+    <img src="http://placehold.it/200x150" alt="" />
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita modi
+        assumenda sed! Consequuntur praesentium debitis blanditiis dignissimos in,
+        voluptatem ad soluta voluptatibus excepturi minima aliquam mollitia at
+        odit vero inventore. Harum eos maxime quo vel, dolores ad animi pariatur,
+        dolore nam, facilis eveniet atque. Impedit doloribus repellendus
+        laboriosam perspiciatis adipisci. Omnis, quibusdam. Sed in quaerat
+        officiis qui veritatis labore excepturi.
+    </p>
+    <div class="parent clearfix">
+        <span>hello world</span>
+        <img src="http://placehold.it/200x150" alt="" />
+        <!-- <img src="http://placehold.it/200x150" alt="" />
+        <img src="http://placehold.it/200x150" alt="" />
+        <img src="http://placehold.it/200x150" alt="" />
+        <img src="http://placehold.it/200x150" alt="" /> -->
+    </div>
+  </body>
+</html>
