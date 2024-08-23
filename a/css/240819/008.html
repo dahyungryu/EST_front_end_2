@@ -1,0 +1,71 @@
+<!-- CSS의 기본: Box Model -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* css box model은 블록레벨 요소에 적용 */
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        /* margin: 10px; */
+      }
+      /* 인라인 레벨 요소는 width, height, 상하 마진값이 적용되지 않음 */
+      span {
+        background-color: hotpink;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .box1,
+      .box3 {
+        padding: 20px;
+        padding: 20px 20px 20px 20px;
+        padding: 20px 20px 20px;
+        padding: 20px 20px;
+
+        margin: 20px;
+        margin: 20px 20px 20px 20px;
+        margin: 20px 20px 20px;
+        margin: 20px 20px;
+      }
+      .box4 {
+        width: 400px;
+        background-color: beige;
+      }
+
+      p {
+        width: 100px;
+        background-color: white;
+        /* 가운데 정렬
+        margin:auto 
+        오른쪽 정렬*/
+        margin: auto 0 auto auto;
+      }
+      .A {
+        background-color: limegreen;
+        margin-bottom: 100px;
+      }
+      .B {
+        background-color: thistle;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">
+      <p>margin을 사용한 정렬</p>
+    </div>
+
+    <div class="A"></div>
+    <div class="B"></div>
+    <!-- <span> span </span> -->
+  </body>
+</html>

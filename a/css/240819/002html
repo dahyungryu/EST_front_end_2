@@ -1,0 +1,78 @@
+<!-- 가상 클래스와 가상 요소 기초 -->
+<!-- 구조적 가상 선택자 1 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상클래스와 가상요소2</title>
+    <style>
+      /* 첫번째 요소를 선택 */
+      li:first-child {
+        color: brown;
+      }
+
+      /* 마지막요소를 선택 */
+      li:last-child {
+        color: aqua;
+      }
+
+      /* 세번쩨 요소를 선택 */
+      li:nth-child(3) {
+        font-weight: bold;
+        background-color: lightgoldenrodyellow;
+      }
+
+      /* 홀수번째 */
+      li:nth-child(odd) {
+        background-color: lavender;
+      }
+
+      /* 홀수번째 */
+      li:nth-child(2n-1) {
+        background-color: lightseagreen;
+      }
+
+      /* 짝수번째 */
+      li:nth-child(even) {
+        background-color: lightgreen;
+      }
+
+      /* 짝수번째 */
+      li:nth-child(2n) {
+        background-color: lightcoral;
+      }
+
+      /* 앞에서 3개의 요소 */
+      li:nth-child(-n + 3) {
+        text-decoration: underline;
+      }
+
+      ul:first-child {
+        border: solid 4px black;
+      }
+
+      /* body태그의 직계자손에는 :last-child 가상 클래스가 적용되지 않는다! */
+      ul:last-child {
+        border: solid 4px black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+    <ul>
+      <li>마지막 요소</li>
+    </ul>
+  </body>
+</html>
