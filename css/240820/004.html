@@ -1,0 +1,90 @@
+<!-- css box model -->
+<!-- background 1 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        background-color: lavenderblush;
+        padding: 40px;
+
+        /* 배경 이미지 지정 */
+        background-image: url(https://i.namu.wiki/i/8BAuDmjlFbHoGpGTyTUJyeIsrWw7vrGKTvbOBS1DbaLNHHFL6D05TSZEyVGGffn_RIs6zrf4jCb5Xq5Lnbs8QQ.webp);
+
+        /* 배경 이미지의 사이즈 지정 상대단위, 절대단위 모두 가능 */
+        background-size: 200px 100px;
+
+        /* 여백 발생 가능성 x, 이미지의 비율 유지, 이미지 잘림 */
+        background-size: contain;
+
+        /* 여백 발생 가능성 x, 이미의 비율 유지, 이미지 잘리지 않음 */
+        background-size: cover;
+
+        /* 배경 이미지를 어떻게 반복할 것인지 */
+        background-repeat: no-repeat;
+
+        /* 배경 이미지 위치 조정, 좌측 상단에서 얼마나 떨어질 것인지 */
+        background-position: 20px 50px;
+        background-position: center;
+
+        font-size: 32px;
+        /* 스크롤시 배경이미지가 어떻게 작동할 것인지 */
+        /* 기본값, 영역과 이미지가 함꼐 스크롤 */
+        background-attachment: scroll;
+        /* 뷰포트에 고정, 스크롤해도 이미지는 움직이지 않습니다. */
+        background-attachment: fixed;
+
+        border: 20px dotted hotpink;
+        /* background-clip 이미지가 어디까지 차지할 것인지 지정 */
+        /* 요소가 차지하는 영역까지 */
+        background-clip: content-box;
+
+        /* 패딩이 차지하는 영역까지 */
+        background-clip: padding-box;
+
+        /* 기본값, border가 차지하는 영역까지*/
+        background-clip: border-box;
+
+        /* 배경 이미지의 시작점 조정 */
+        /* 기본값, 패딩 영역 좌측 상단부터*/
+        background-origin: padding-box;
+
+        /* border 영역 좌측 상단부터 */
+        background-origin: border-box;
+
+        /* content(요소)영역 좌측 상단부터 */
+        background-origin: content-box;
+
+        /* gradient 배경 */
+        background: rgb(131, 127, 198);
+        background: linear-gradient(
+          90deg,
+          rgba(131, 127, 198, 1) 0%,
+          rgba(221, 176, 235, 1) 23%,
+          rgba(255, 195, 249, 1) 57%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque in
+      eligendi vero quibusdam quisquam. Deleniti nemo veritatis, earum magnam
+      doloremque fuga nobis non. Optio quisquam nihil labore. Quidem, mollitia
+      alias. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+      quibusdam accusamus, inventore officiis laboriosam, omnis sequi mollitia
+      ex iusto, cumque numquam impedit explicabo nemo commodi velit at quisquam
+      expedita harum! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Alias vitae nam sint omnis harum, corrupti doloribus dolores iste non
+      voluptatibus cumque atque eveniet ratione nihil porro perspiciatis
+      molestiae iure accusantium. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quibusdam earum voluptatum mollitia impedit ducimus.
+      Corporis sapiente voluptas tempora quia? Earum sed veniam odit amet
+      doloremque minima id eveniet reprehenderit exercitationem.
+    </div>
+  </body>
+</html>

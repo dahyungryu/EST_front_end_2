@@ -1,0 +1,59 @@
+<!-- css box model -->
+<!-- border-radius 실습 1 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        /* display: flex; */
+      }
+
+        div {
+        width: 200px;
+        height: 200px;
+        background-color: lavender;
+        margin-bottom: 10px;
+        /* display: inline-block; */
+      }
+
+      .one {
+        /* border-radius: 50px */
+        border-radius: 50%;
+      }
+
+      .two {
+        border-radius: 10px;
+      }
+
+      .three {
+        border-radius: 100% 0 0 0;
+      }
+
+      .four {
+        /* border-radius: 100% 0 100% 0; */
+        border-radius: 100% 0;
+      }
+
+      .five {
+        border-radius: 0 50%;
+      }
+
+      /* 반원 */
+      .six {
+        height: 50px;
+        border-radius: 100px 100px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+  </body>
+</html>

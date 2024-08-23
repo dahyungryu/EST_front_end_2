@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+      .pixelify-sans-font {
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: 50px;
+        font-weight: 700;
+        font-style: normal;
+      }
+/* background-image, background-repeat, background-position으로 배경화면 중앙에 배치하고, border-radius로 둥글둥글하게 만들어주고, border:dotted로 테두리에 꾸며줬고, box-shadow로 명암 생기게 만들어줬습니당 글자는 구글 폰트에서 pixelify-sans찾아서 사용했고 text-align: center로 중앙에 오도록 해줬어요! */
+      .back {
+        width: 600px;
+        height: 400px;
+        background-color: lavender;
+
+        background-image: url(nwjns.svg);
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        border: 5px dotted rgb(190, 190, 244);
+        background-attachment: scroll;
+        background-position: center;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 14px 28px,
+          rgba(0, 0, 0, 0.25) 0px 10px 10px;
+      }
+      .word {
+        text-align: center;
+      }
+      p {
+        font-size: 23px;
+      }
+    </style>
+    <title>슬로건</title>
+  </head>
+
+  <body>
+    <div class="back">
+      <div class="word">
+        <p class="pixelify-sans-font">
+          NEWJEANS MINJI HANNI DANIELLE HAERIN HYEIN
+        </p>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <p class="pixelify-sans-font">BUNNIES</p>
+      </div>
+    </div>
+  </body>
+</html>
