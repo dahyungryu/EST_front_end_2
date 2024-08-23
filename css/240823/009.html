@@ -1,0 +1,56 @@
+<!-- 가상 클래스와 가상 요소 심화 -->
+<!-- :focus-within :disabled :enabled-->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        width: 500px;
+        border: solid 2px #ddd;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-right: 40px;
+      }
+
+      button:enabled:hover {
+        background-color: blue;
+        cursor: pointer;
+      }
+
+      button:disabled,
+      input:disabled {
+        background: black;
+        cursor: not-allowed;
+      }
+      button:active {
+        background-color: red;
+      }
+      div:focus-within {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button>눌러보세요!!!!!!</button>
+    </div>
+
+    <div>
+        <input type="text">
+        <button>enabled</button>
+
+
+        <input type="text">
+        <button disabled>disabled</button>
+    </div>
+
+
+  </body>
+</html>

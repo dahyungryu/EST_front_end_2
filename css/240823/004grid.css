@@ -1,0 +1,55 @@
+div {
+  display: grid;
+  width: 600px;
+  background-color: cadetblue;
+
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+  grid-gap: 10px 10px;
+  padding: 10px;
+}
+header, section, aside, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+header, section, footer {
+    color: #fff;
+}
+header, footer {
+    height: 100px;
+}
+header {
+    background-color: lightblue;
+    grid-area: header;
+}
+main {
+    grid-area: main;
+    flex-direction: row;
+    height: 300px;
+    display: grid;
+    grid-template-areas: "section aside";
+    grid-gap: 10px;
+}
+section, aside {
+    height: 300px;
+}
+section {
+    background-color: darkblue;
+    grid-area: section;
+}
+aside {
+    background-color: limegreen;
+    color: darkblue;
+    grid-area: aside;
+    
+}
+
+footer {
+    background-color: coral;
+    grid-area: footer;
+}

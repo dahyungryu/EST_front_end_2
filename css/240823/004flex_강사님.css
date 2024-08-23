@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  height: 400px;
+}
+
+section {
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+
+aside {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+header,
+section,
+aside,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 212, 226);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
