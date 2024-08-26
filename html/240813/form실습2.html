@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .modal {
+        width: 520px;
+        height: 712px;
+        top: 162px;
+        left: 1978px;
+        gap: 0px;
+        opacity: 0px;
+      }
+      .title {
+        width: 144px;
+        height: 20px;
+        top: 20px;
+        left: 188px;
+        gap: 0px;
+        opacity: 0px;
+      }
+      .line {
+        width: 520px;
+        height: 1px;
+        top: 58px;
+        gap: 0px;
+        opacity: 0px;
+      }
+    </style>
+    <title>로그인 또는 회원가입</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h2>로그인 또는 회원가입</h2>
+        <button type="button">
+          <img src="#" alt="창닫기" />
+        </button>
+      </header>
+      <section>
+        <h3>로그인</h3>
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <form action="" method="post">
+          <label for="id" class="sr-only"></label>
+          <input type="text" placeholder="아이디" id="id" required />
+          <br />
+          <label for="pw" class="sr-only"></label>
+          <input type="password" placeholder="비밀번호" id="pw" required />
+          <br />
+          <label for="keepLoggedIn"> 로그인 상태 유지 </label>
+          <input type="checkbox" id="keepLoggedIn" name="keepLoggedIn" />
+          <button type="submit" placeholder="로그인"></button>
+        </form>
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </section>
+      <span>또는</span>
+      <section>
+        <ul>
+            <li><a href="#">구글 계정으로 로그인</a></li>
+            <li><a href="#">페이스북 계정으로 로그인</a></li>
+            <li><a href="#">네이버 계정으로 로그인</a></li>
+            <li><a href="#">카카오톡 계정으로 로그인</a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구매 내역</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      caption {
+        caption-side: top;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        구매 내역
+      </caption>
+      <thead>
+        <tr>
+          <th id="purchase">구매 항목</th>
+          <th id="location">장소</th>
+          <th id="date">날짜</th>
+          <th id="color">색상</th>
+          <th id="cost">비용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="yarn">뜨개실</th>
+          <td headers="location yarn">네이버스마트스토어 바토니팅</td>
+          <td headers="date yarn">08/07</td>
+          <td headers="color yarn">그린</td>
+          <td headers="cost yarn">30,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
