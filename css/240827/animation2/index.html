@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      :root {
+        /* 원의 둘레 = 340px * 7 */
+        /* 지름 = 원주 / 파이 / 2 */
+        /* 반지름의 값 */
+        --translateZ: calc((300px * 5) / 3.14 / 2);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      @keyframes tintin {
+        to {
+          transform: translate(-50%, -50%) rotateY(-360deg);
+        }
+      }
+      div {
+        height: 100vh;
+        perspective: 1000px;
+      }
+
+      .list-item {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        animation: tintin 8s infinite linear;
+      }
+
+      .list-item li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      li img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      li:nth-child(1) {
+        transform: rotateY(0) translateZ(var(--translateZ));
+      }
+
+      li:nth-child(2) {
+        transform: rotateY(calc(360deg / 5)) translateZ(var(--translateZ));
+      }
+
+      li:nth-child(3) {
+        transform: rotateY(calc(360deg / 5 * 2)) translateZ(var(--translateZ));
+      }
+
+      li:nth-child(4) {
+        transform: rotateY(calc(360deg / 5 * 3)) translateZ(var(--translateZ));
+      }
+
+      li:nth-child(5) {
+        transform: rotateY(calc(360deg / 5 * 4)) translateZ(var(--translateZ));
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="list-item">
+        <li><img src="./images/snowy.png" alt="밀루" /></li>
+        <li><img src="./images/tintin.jpeg" alt="땡땡" /></li>
+        <li><img src="./images/haddock.jpeg" alt="아독" /></li>
+        <li><img src="./images/hbrg.jpeg" alt="해바라기" /></li>
+        <li><img src="./images/duponddupont.jpeg" alt="듀퐁뒤퐁" /></li>
+      </ul>
+    </div>
+  </body>
+</html>
