@@ -1,0 +1,32 @@
+<!-- 반응형 이미지 -->
+<!-- cmd + shift + R 강제새로고침으로 캐시 지우기 해줘야됨 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <img
+      srcset="
+        ./img/chilli_360px.jpg   360w,
+        ./img/chilli_720px.jpg   720w,
+        ./img/chilli_1440px.jpg 1440w
+      "
+      src="./img/chilli_360px.jpg"
+      alt="다람쥐 캐릭터 칠리"
+    />
+    ㄴ
+    <img
+      srcset="
+        ./img/chilli_360px.jpg   360w,
+        ./img/chilli_720px.jpg   720w,
+        ./img/chilli_1440px.jpg 1440w
+      "
+      sizes="(max-width: 360px) 200px, (max-width: 720px) 400px, 800px"
+      src="./img/chilli_360px.jpg"
+      alt="다람쥐 캐릭터 칠리"
+    />ㄴㄴ
+  </body>
+</html>
