@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 숫자 자료형
+      console.log(typeof 23);
+      console.log(typeof 23.4);
+
+      //숫자 표현방법
+      console.log("10진수", 120);
+      console.log("2진수", 0b1100); //10진수로 처리
+      console.log("8진수", 0o16); //8진수 16을 10진수로 처리
+      console.log("16진수", 0xff); //16진수 FF를 10진수로 처리
+
+      console.log("======숫자형 연산=====");
+      console.log(`5 + 2 = ${5 + 2}`);
+      console.log(`5 - 2 = ${5 - 2}`);
+      console.log(`5 * 2 = ${5 * 2}`);
+      console.log(`5 / 2 = ${5 / 2}`);
+      console.log(`5 ** 2 = ${5 ** 2}`); //지수(5^2)
+      console.log(`5 % 2 = ${5 % 2}`); //나머지
+
+      console.log("=====단항 연산=====");
+      console.log(+4);
+      console.log(+"4"); //숫자형으로 변환
+      console.log(typeof +"4");
+      console.log(-(-4));
+      console.log(-4);
+      console.log(-"4"); //숫자형으로 변환
+
+      console.log("=====증감 연산=====");
+      let num = 3;
+      console.log(num++);
+      console.log(num);
+      console.log(++num);
+
+      console.log(num--); //출력 먼저 빼기 다음
+      console.log(num);
+      console.log(--num);
+
+      console.log("=====비교연산=====");
+      console.log(3 > 2);
+      console.log(4 >= 3);
+      console.log(2 < 1);
+      console.log(5 <= 7);
+
+      console.log("==", 2 == 3);
+      console.log("==", 2 == "2");
+      console.log("!=", 2 != 3);
+      console.log("==", 2 != "2");
+
+      console.log("===", 2 === 3);
+      console.log("===", 2 === "2"); //false 타입이 달라서
+      console.log("!==", 2 !== 3);
+      console.log("!==", 2 !== "2");
+
+      // 숫자
+      // 정수 실수 외의 특수값
+      console.log("Infinity", 1 / 0);
+      console.log("-Infinity", -1 / 0);
+
+      console.log("e", 3e10); // 3*(10^10)
+      console.log("e", 2e-10); //2*(10^-5)
+
+      console.log("NaN(Not a Number)", NaN);
+      console.log(typeof NaN);
+      console.log("2" / "Hello");
+      console.log(+"True");
+
+      // 메서드
+      // 문자를 숫자로
+      console.log(parseInt("234"));
+      console.log(parseInt("234.6"));
+      console.log(parseFloat("234.6"));
+      console.log(parseInt("110", 2)); //110을 2진수로 처리 -> 10진수의 정수로 변환
+
+      // 숫자를 문자로
+      const numString = 10;
+      console.log(numString.toString());
+      console.log((3).toString());
+
+      console.log((2.3).toString());
+      console.log(NaN.toString());
+
+      // 소수점 이하의 자릿수
+      const number = 23.512;
+      console.log(number.toFixed()); // 반올람
+      console.log(number.toFixed(1)); //소수점 첫번째까지 반올림
+      console.log(typeof number.toFixed(1)); //문자열울 변환
+
+      console.log("2 == 3", 2 == 3);
+      console.log("2 == 2", 2 == 2);
+
+      console.log("2 === 3", 2 === 3);
+
+      console.log("NaN == NaN", NaN == NaN); //false
+      console.log("NaN === NaN", NaN === NaN); //false
+
+      console.log(isNaN(2));
+      console.log(isNaN(2 * "Hello"));
+      console.log(isNaN("Hello")); //true
+      // isNaN: 형 변환 발생 "Hello"를 숫자로 바꿔보려고 용 씀
+
+      console.log(Number.isNan("Hello"));
+      console.log(Number.isNan(NaN));
+      console.log(Number.isNan("weniv" * 100));
+
+      console.log(Object.is(2 * "Hello", NaN));
+
+      console.log("===== Math 객체 =====");
+      console.log("반올림(3.6)", Math.round(3.6));
+      console.log("반올림(3.4)", Math.round(3.4));
+      console.log("올림(2.4)", Math.ceil(2.4));
+      console.log("내림(4.8)", Math.floor(4.8));
+
+      console.log("2 ** 3", Math.pow(2, 3)); // 2의 8승
+      console.log("제곱근", Math.sqrt(24)); // 제곱근
+      console.log("제곱근 -> 지수 연산으로", 16 ** 0.5);
+      console.log("절대값", Math.abs(-5)); // 절대값
+
+      console.log("난수", Math.random());
+      console.log(
+        "0보다 크고 11보다 작은 랜덤 숫자",
+        Math.floor(Math.random() * 11)
+      );
+
+      console.log("=====BigInt=====");
+      // 안전하게 표현 가능한 숫자를 벗어나는 큰 숫자를 표현
+      let BigInt = 1259042n;
+      console.log(BigInt);
+      console.log(typeof BigInt);
+      console.log(bigInt * BigInt(5));
+      // Number.MAX_SAFE_INTEGER 안정성이 보장
+      const Max_BigInt = BigInt(Number.MAX_SAFE_INTEGER + 4);
+      console.log(Max_BigInt);
+      console.log(BigInt("9007199254740995"));
+    </script>
+    console.log("");
+  </body>
+</html>
