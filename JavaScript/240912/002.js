@@ -101,3 +101,37 @@ console.log();
 console.log();
 console.log();
 console.log();
+
+function sum(a, b) {
+  return a + b;
+}
+function sub(a, b) {
+  return a - b;
+}
+function mul(a, b) {
+  return a * b;
+}
+function div(a, b) {
+  return a / b;
+}
+
+function calculator(op, a, b) {
+  let result;
+  switch (op) {
+    case "+":
+      result = a + b;
+      break;
+    case "-":
+      result = a - b;
+      break;
+    case "*":
+      result = a * b;
+      break;
+    case "/":
+      result = a / b;
+      break;
+  }
+  console.log(`${a} ${op} ${b} = ${result} `);
+  return result;
+}
+calculator("*", 3, 5);

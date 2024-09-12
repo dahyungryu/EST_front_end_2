@@ -12,7 +12,7 @@ fruits.push("망고");
 console.log("fruits", fruits);
 console.log("fruits2", fruits2);
 
-console.log("1. 배열의 전개 구문");
+console.log("1. 객체의 전개 구문");
 const weniv1 = { gary: 1, binky: 2 };
 const weniv2 = { licat: 3 };
 const weniv = { ...weniv1, ...weniv2 };
