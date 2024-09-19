@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="msg">What's the next color?</p>
+      <button type="button" id="btn">Change color</button>
+    </div>
+
+    <script>
+      const btn = document.querySelector("#btn");
+      const p = document.querySelector(".msg");
+      btn.addEventListener("click", (e) => {
+        const r = random();
+        const g = random();
+        const b = random();
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        p.innerHTML = `currentColor = rgb(${r}, ${g}, ${b})`;
+      });
+      function random() {
+        return Math.floor(Math.random() * 255);
+      }
+    </script>
+  </body>
+</html>

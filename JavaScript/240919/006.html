@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .modal {
+            display: none;
+            width: 400px;
+            height: 400px;
+            border-radius: 20%;
+            position: absolute;
+
+            background-color: hotpink;
+            color: #fff;
+    
+        }
+        .open {
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <button class="openModal">open</button>
+    <div class="modal">
+         <h2>Modal Notice</h2>
+         <button class="closeModal">close</button>
+    </div>
+    <script>
+        const openModal = document.querySelector('.openModal');
+        const closeModal = document.querySelector('.closeModal');
+        const modal = document.querySelector('.modal');
+
+        openModal.addEventListener('click', () => {
+            modal.classList.add("open");
+        })
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove("open");
+        })
+    </script>
+  </body>
+</html>
