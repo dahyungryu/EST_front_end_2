@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <link rel="stylesheet" href="./common.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Count</h1>
+      <div class="count-container">
+        <button type="button" id="minus">-</button>
+        <span id="num">0</span>
+        <button id="plus">+</button>
+      </div>
+    </div>
+
+    <script>
+      const plusbtn = document.getElementById("plus");
+      const minusbtn = document.getElementById("minus");
+      const count = document.getElementById("num");
+
+      plusbtn.addEventListener("click", () => {
+        count.textContent++;
+      });
+      minusbtn.addEventListener("click", () => {
+        count.textContent--;
+      });
+    </script>
+  </body>
+</html>

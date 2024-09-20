@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <link rel="stylesheet" href="./common.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Change BODY color</h1>
+      <p id="msg">이전색상 : ?</p>
+      <input type="color" id="color" />
+      <input type="text" id="input" name="color" placeholder="input color" />
+      <button type="button" id="btn">CHANGE!</button>
+    </div>
+
+    <script>
+      const msg = document.getElementById("msg");
+      const pickColor = document.getElementById("color");
+      const inputColor = document.getElementById("input");
+      const btn = document.getElementById("btn");
+      let prevColor = "";
+
+      btn.addEventListener("click", () => {
+        const curColor = input.value;
+        document.body.style.backgroundColor = curColor;
+        msg.innerHTML = `이전 색상은 : ${prevColor}, 현재 색상은 : ${curColor}`;
+
+        prevColor = curColor;
+      });
+
+      pickColor.addEventListener("change", () => {
+        console.log("changed");
+        inputColor.textContent = pickColor.value
+        if (prevColor !== pickColor.value) {
+          document.body.style.backgroundColor = pickColor.value;
+          msg.innerHTML = `이전 색상은 : ${prevColor}, 현재 색상은 : ${curColor}`;
+          prevColor = pickColor.value;
+        }
+      });
+    </script>
+  </body>
+</html>

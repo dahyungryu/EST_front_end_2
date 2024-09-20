@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <!-- <link rel="stylesheet" href="common.css" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .btn-delete {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="myForm">
+      <input type="text" name="food" id="input" />
+      <button type="submit" id="addList">+ADD</button>
+    </form>
+    <ul class="foodList"></ul>
+
+    <script>
+      const fm = document.forms.myForm;
+      const foodList = document.querySelector(".foodList");
+
+      fm.addEventListener("submit", printList);
+
+      function printList(e) {
+        e.preventDefault();
+        let food = e.target.food.value;
+        let li = document.createElement("LI");
+        let btn = document.createElement("BUTTON");
+
+        li.textContent = food;
+
+        btn.setAttribute("type", "button");
+        btn.className = "btn-delete";
+        btn.textContent = "X";
+
+        li.appendChild(btn);
+        foodList.appendChild(li);
+
+        const deleteBtns = document.querySelectorAll(".btn-delete");
+        deleteBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            //=>로 했을때 전역 객체인 window를 가리키기 때문에 function으로 해야 함
+            //this.closest('li').remove();
+            btn.parentElement.remove();
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
