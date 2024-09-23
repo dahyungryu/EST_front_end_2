@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <article class="parent">
+      <button class="btn" type="button">버튼</button>
+    </article>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      const btnFirst = document.querySelector(".btn");
+
+      btnFirst.addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation();
+          console.log("btn capture!");
+        },
+        true
+      );
+
+      parent.addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation();
+          console.log("parent capture!");
+        },
+        true
+      );
+
+      btnFirst.addEventListener("click", (e) => {
+        // e.stopPropagation();
+        console.log("btn bubble!");
+      });
+
+      parent.addEventListener("click", (e) => {
+        // e.stopPropagation();
+        console.log("parent bubble!");
+      });
+    </script>
+  </body>
+</html>
