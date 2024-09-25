@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            constructor() {
+                this.name = '다형'
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+        }
+
+        class Child extends Parent {
+            constructor() {
+                super();
+                this.myName = '복순'
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+
+            sayName(value) {
+                arguments
+                console.log(value);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const me = {
+        name: "유다형",
+        age: 24,
+        school: "Hanyang Univ.",
+        major: "Computer Software Engineering",
+        phoneNo: "010-2252-0604",
+        greeting: function () {
+          console.log(
+            `안녕 내 이름은 ${name}이고 ${school}에서 ${major}를 전공하고 있어. 반가워!`
+          );
+        },
+        making: function (coffee) {
+          coffee.brew();
+        },
+      };
+
+      const americano = {
+        brew: function () {
+          console.log(`add espresso in water`);
+        },
+      };
+
+      me.making(americano);
+    </script>
+  </body>
+</html>

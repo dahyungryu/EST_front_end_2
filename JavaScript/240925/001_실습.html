@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Sausage {
+        constructor(el1, el2) {
+          this.el1 = el1;
+          this.el2 = el2;
+        }
+        taste() {
+          console.log(`It tastes like ${this.el1} and ${this.el2}!`);
+        }
+      }
+      class FireSausage extends Sausage {
+        taste() {
+          console.log(
+            `It tastes like ${this.el1} and ${this.el2}! and it's fire!`
+          );
+        }
+      }
+      const mySausage = new Sausage("파", "소고기");
+      const myFireSausage = new FireSausage("파", "소고기");
+    </script>
+  </body>
+</html>

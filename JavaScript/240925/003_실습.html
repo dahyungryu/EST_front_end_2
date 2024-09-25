@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+        class Todo {
+            constructor (todo, isDone){
+                this.todo = todo;
+                this.isDone = isDone;
+            }
+            
+            changeState(todo) {
+                this.isDone = !isDone;
+                return this.isDone;
+            }
+        }
+        class TodoManager {
+            constructor() {
+                this.items = [];
+            }
+            getItems() {
+                return this.items;
+            }
+            addItem(value) {
+                this.todo = new Todo(value, false);
+                this.items.push(this.todo.todo);
+            }
+            getLeftTodoCount() {
+                count = 0;
+
+                this.items.forEach(item => {
+                    if (item.isDone === false){
+                        count++;
+                    }
+                }); 
+                return count;
+            }
+        }
+      const todoManager = new TodoManager();
+
+      todoManager.getItems();
+      todoManager.addItem("청소하기");
+      todoManager.getItems();
+      todoManager.getLeftTodoCount();
+    </script>
+  </body>
+</html>
