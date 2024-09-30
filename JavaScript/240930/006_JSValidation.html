@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <form action="">
+      <input type="email" pattern="[0-9]" required />
+      <button>제출</button>
+    </form>
+    <script>
+      const inp = document.querySelector("input");
+      inp.addEventListener("input", () => {
+        console.log(inp.validity);
+      });
+
+      inp.setCustomValidity('뭔가...문제가 있는것 같습니다');
+    </script>
+  </body>
+</html>
