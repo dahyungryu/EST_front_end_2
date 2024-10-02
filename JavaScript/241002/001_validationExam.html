@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        input {
+            border-color: blue;
+        }
+        input:valid {
+            border-color: teal;
+        }
+        input:invalid {
+            border-color: tomato;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 사용자가 입력한 비밀번호를 벨리데이션하는 폼을 만들어 봅시다.
+input은 비밀번호, 비밀번호 확인 두 가지가 있어야하며
+
+이때 만약 
+1. input에 아무것도 입력하지 않았거나
+2. 비밀번호 input과 비밀번호 확인 input의 값이 동일하지 않거나,
+3. 비밀번호의 패턴이 정규표현식과 일치하지 않은 경우
+
+에러메시지를 출력하도록 만들어보세요 -->
+
+    <form action="">
+        <label for="setPw">비밀번호</label>
+      <input
+        type="text"
+        id="setPw"
+        placeholder="비밀번호를 입력하세요."
+        minlength="8"
+        maxlength="16"
+        pattern="[A-Za-z0-9]"
+        required
+      />
+      <label for="checkPw">비밀번호 확인</label>
+      <input
+        type="text"
+        id="checkPw"
+        placeholder="비밀번호를 확인해주세요."
+        minlength="8"
+        maxlength="16"
+        pattern="[A-Za-z0-9]"
+        required
+      />
+      <button>제출</button>
+      <div class="msg"></div>
+    </form>
+    <script>
+      const password = document.querySelector('input');
+      const setPw = document.getElementById("setPw");
+      const checkPw = document.getElementById("checkPw");
+      const btn = document.querySelector('button');
+      const msg = document.querySelector('.msg');
+
+
+      function comparePw(setPw, checkPw) {
+        if (setPw.textContent !== checkPw.textContent) {
+            return "비밀번호가 일치하지 않습니다! 다시 입력해주세요."
+        }else{
+            return "비밀번호가 일치합니다."
+        };
+      }
+
+      password.addEventListener('input', () => {
+        if (password.validity.valueMissing) {
+            password.setCustomValidity("비밀번호를 입력하지 않았습니다!");
+        }else if (password.validity.typeMismatch) {
+            password.setCustomValidity('비밀번호를 올바르게 입력해주세요!');
+        }
+      })
+      checkPw.addEventListener('input', () => {
+        if(comparePw){
+            checkPw.setCustomValidity("비밀번호가 일치하지 않습니다!")
+        }
+      })
+      btn.addEventListener('click', () => {
+        msg.textContent = comparePw(setPw, checkPw);
+      })
+    </script>
+  </body>
+</html>

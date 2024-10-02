@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const time = new Date();
+
+      time.getFullYear(); //2024
+      time.getYear(); //124 뒷자리만 반환 2000년이 오지 않을거라는 생각(?)에 만든 함수.
+
+      time.getMonth(); // 0부터 시작. 월의 index
+
+      const month = [
+        "해오름달",
+        "시샘달",
+        "물오름달",
+        "잎새달",
+        "푸른달",
+        "누리달",
+        "견우직녀달",
+        "타오름달",
+        "열매달",
+        "하늘연달",
+        "미름달",
+        "매듭달",
+      ];
+      month[time.getMonth];
+      console.log(time.getFullYear());
+      console.log(time.getYear());
+      console.log(time.getMonth());
+      console.log(time.getDate());
+      console.log(time.getDay());
+      console.log(time.getHours());
+      console.log(time.getMinutes());
+      console.log(time.getSeconds());
+
+      const hours =
+        time.getHours() > 12 ? time.getHours() - 12 : time.getHours();
+      const 오전오후 = time.getHours() > 11 ? "오후" : "오전";
+      console.log(오전오후 + hours + "시");
+
+      // 분이 한자리일 경우 앞에 0 붙이기
+      const minutes =
+        time.getMinutes() >= 10 ? time.getMinutes() : "0" + time.getMinutes();
+
+      const now = `지금은 ${오전오후} ${hours}시 ${minutes}분 입니다.`;
+      console.log(now);
+
+
+      const myTime = new Date(2024, 8, 31); //10 01 초과
+    //   const myTime = new Date(2024, 8, 1); //9 1
+    //   const myTime = new Date(2024, 8, 0); //8 31
+    </script>
+  </body>
+</html>
