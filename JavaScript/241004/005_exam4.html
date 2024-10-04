@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .tomato {
+        color: tomato;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 8자 이상인 모든 단어를 노란색으로 강조하기. 마크업에서 단락 텍스트 중 8자 이상인 모든 단어를 강조 표시하세요 -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quisquam
+      repudiandae a, nesciunt illo minus earum voluptate quia veritatis,
+      molestias, fugiat doloribus! Temporibus excepturi eligendi laborum
+      blanditiis dolores possimus aspernatur maxime odio. Voluptas dolores illum
+      consequuntur eius accusamus saepe nobis est porro iusto doloremque sint
+      sed quibusdam quasi ab aut, similique eaque vero vel dolorum ut odio,
+      animi deleniti! Cupiditate voluptates blanditiis nisi, eum obcaecati
+      corrupti debitis, veritatis aspernatur, veniam sit sunt repellat velit
+      officia inventore voluptate pariatur perferendis magni corporis! Culpa
+      totam distinctio quo, sint tempora fugiat aspernatur dolore aliquid, qui
+      delectus facilis nobis in? Eveniet facere commodi dolorem?
+    </p>
+
+    <script>
+      const paragraph = document.querySelector("p");
+
+      paragraph.innerHTML = paragraph.textContent
+        .split(" ")
+        .map((item) =>
+          item.length >= 8 ? `<strong class="tomato">${item}</strong>` : item
+        )
+        .join(" ");
+    </script>
+  </body>
+</html>
