@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        { id: 1, name: "재현" },
+        { id: 2, name: "호준" },
+        { id: 3, name: "원범" },
+      ];
+
+      const userAddresses = [
+        { id: 1, address: "Deongneung-ro 10-gil" },
+        { id: 2, address: "Inda 1-gil" },
+        { id: 3, address: "58, Banpo-daero, Seocho-gu" },
+      ];
+
+      const getUsers = () => {
+        return new Promise((resolve) => {
+          resolve(users);
+        });
+      };
+
+      const getUserAddresses = () => {
+        return new Promise((resolve) => {
+          resolve(userAddresses);
+        });
+      };
+
+      getUsers()
+        .then((users) => {
+          return getUserAddresses().then((userAddresses) => {
+            const mergedResult = users.map((user) => {
+              const mappedAddress = userAddresses.find((address) => {
+                return address.id === user.id;
+              });
+              return { ...user, ...mappedAddress };
+            });
+            console.log(mergedResult);
+            return mergedResult;
+          });
+        })
+        .then((result) => {
+          console.log(result);
+          return result;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      /*  Promise.all([getUsers(), getUserAddresses()])
+            .then(([users, addresses]) => {
+                const mergedResult = users.map((user) => {
+                    const mappedAddress = addresses.find((address) => {
+                        return address.id === user.id
+                    });
+
+                    return { ...user, ...mappedAddress };
+                });
+
+                return mergedResult;
+            }).then((result) => {
+                console.log(result);
+                return result;
+            }).catch((error) => {
+                console.error(error);
+            });*/
+
+      //     (async () => {
+      //     try {
+      //         const [users, addresses] = await Promise.all([getUsers(), getUserAddresses()]);
+
+      //         const mergedResult = users.map((user) => {
+      //             const mappedAddress = addresses.find((address) => {
+      //                 return address.id === user.id
+      //             });
+
+      //             return { ...user, ...mappedAddress };
+      //         });
+
+      //         console.log(mergedResult);
+      //     } catch (error) {
+      //         console.error(error);
+      //     }
+
+      // })();
+    </script>
+  </body>
+</html>
